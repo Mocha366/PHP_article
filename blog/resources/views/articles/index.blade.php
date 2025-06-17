@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
 </head>
 <body>
     <header>
@@ -15,7 +16,8 @@
         <article class="article-item">
             <div class="article-title">{{ $article->title }}</div>
             <div class="article-body">{{ $article->body }}</div>
-    </article>
+        </article>
+        @endforeach
     </main>
     <footer>
         &copy; Laravel8 入門～開発実践まで
