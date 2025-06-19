@@ -17,4 +17,4 @@ class Bookmark extends Model
     {
         return $this->belongsTo(Article::class);
     }
-    }
+}

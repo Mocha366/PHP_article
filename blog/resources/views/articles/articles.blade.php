@@ -8,7 +8,13 @@
         @if (!Auth::user()->is_bookmark($article->id))
         <form action="{{ route('bookmark.store', $article) }}" method="post">
             @csrf
-            <button>お気に入り登録</button>
+            <button>登録</button>
+        </form>
+        @else
+        <form action="{{ route('bookmark.destroy', $article) }}" method="post">
+            @csrf
+            @method('delete')
+            <button>解除</button>
         </form>
         @endif
     </div>
